@@ -1,4 +1,4 @@
-## Neurons and Governance
+# Neurons and Governance
 
 -   The Network Nervous System (NNS) is the governance body that controls the Internet Computer blockchain.
 -   The NNS manages various aspects of the blockchain, including data center providers, node assignments, upgrades, and protocol versions.
