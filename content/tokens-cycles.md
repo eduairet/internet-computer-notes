@@ -6,8 +6,9 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="../resources/tokens-dark.png">
   <img alt="Tokens diagram" src="../resources/tokens-dark.png">
-  <figcaption><i>Image by <a href="https://internetcomputer.org/docs/current/concepts/tokens-cycles">IC</a></i></figcaption>
 </picture>
+
+-   _Image by [IC](https://github.com/eduairet/internet-computer-notes.git)_
 
 ## Acquiring ICP Tokens:
 
@@ -35,7 +36,7 @@
 -   Tokens are not used to directly pay for resources to avoid affecting canister processing.
 -   Tokens can be exchanged between holders and locked up in neurons for voting rights and governance participation.
 
-## Payment to Node Providers:
+## Payment to Node Providers:
 
 -   Node providers receive compensation for active and spare nodes.
 -   The governance system, the Network Nervous System, manages capacity and compensation.
