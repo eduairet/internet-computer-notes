@@ -4,8 +4,8 @@
 -   ICP tokens have value determined by the market and play a role in governance and economics.
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./resources/tokens-dark.png">
-  <img alt="Tokens diagram" src="./resources/tokens-dark.png">
+  <source media="(prefers-color-scheme: dark)" srcset="../resources/tokens-dark.png">
+  <img alt="Tokens diagram" src="../resources/tokens-dark.png">
   <figcaption><i>Image by <a href="https://internetcomputer.org/docs/current/concepts/tokens-cycles">IC</a></i></figcaption>
 </picture>
 
