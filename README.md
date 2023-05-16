@@ -4,12 +4,16 @@ Internet Computer Certification notes by Eduardo Aire.
 
 ## Content
 
-1. [What is the Internet Computer?](./content/what-is.md)
-2. [How does it Work?](./content/how-work.md)
-3. [Nodes and Subnet Blockchains](./content/nodes.md)
-4. [Decentralized Data Centers](./content/data-centers.md)
-5. [Tokens and Cycles](./content/tokens-cycles.md)
-6. [Neurons and Governance](./content/neurons-governance.md)
+-   **ICP and DFINITY**
+
+    1. [What is the Internet Computer?](./content/what-is.md)
+    2. [How does it Work?](./content/how-work.md)
+    3. [Nodes and Subnet Blockchains](./content/nodes.md)
+    4. [Decentralized Data Centers](./content/data-centers.md)
+    5. [Tokens and Cycles](./content/tokens-cycles.md)
+    6. [Neurons and Governance](./content/neurons-governance.md)
+
+-   **Motoko**
 
 ## Resources
 
