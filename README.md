@@ -30,3 +30,4 @@ Internet Computer Certification notes by Eduardo Aire.
 ## Activities
 
 -   [Day 1](./activities/day-1.md)
+-   [Day 2](./activities/day-2.md)
