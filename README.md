@@ -15,6 +15,9 @@ Internet Computer Certification notes by Eduardo Aire.
 
 -   **Motoko**
 
+    1. [Language intro](./content/language-intro.md)
+    2. [Developer guide](./content/developer-guide.md)
+
 ## Resources
 
 -   [IC official website](https://internetcomputer.org)
