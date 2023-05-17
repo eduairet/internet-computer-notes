@@ -24,3 +24,7 @@ Internet Computer Certification notes by Eduardo Aire.
 -   [Whitepaper](https://internetcomputer.org/whitepaper.pdf)
 -   [Protocol infographics](https://internetcomputer.org/icig.pdf)
 -   [Chrome wallet](https://chrome.google.com/webstore/detail/bitfinity-wallet/jnldfbidonfeldmalbflbmlebbipcnle)
+
+## Activities
+
+-   [Day 1](./activities/day-1.md)

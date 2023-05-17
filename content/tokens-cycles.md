@@ -40,4 +40,3 @@
 
 -   Node providers receive compensation for active and spare nodes.
 -   The governance system, the Network Nervous System, manages capacity and compensation.
--   Detailed compensation and service level requirements are not covered in this document.
