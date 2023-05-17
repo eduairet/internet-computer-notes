@@ -21,12 +21,22 @@
 ## Canisters are the next evolution of smart contracts
 
 -   Canisters are **smart contracts bundled with a computer program and data.**
+
     -   Can be executed concurrently.
     -   Can communicate within and across subnets.
     -   Offers scalability.
     -   Can serve user interfaces.
     -   Can hold gigabytes of memory.
     -   Can pay for their own computation.
+
+-   Computational units that bundle code and state.
+-   They contain endpoints for communication that can be called by other canisters or external parties.
+-   Thay use cycles as units to pay for memory, computation, and network bandwidth.
+-   Resource charging happens for memory usage, computation, and bandwidth at the moment of use.
+-   When they run out of cycles, they are uninstalled.
+-   They are managed by controllers (deploy, update, and maintain them).
+-   Controllers can update the code of canisters and change their parameters.
+-   The IC offers an upgrade mechanism for atomic code updates while preserving stable memory data.
 
 ## Low-latency high-throughput consensus
 

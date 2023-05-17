@@ -12,6 +12,7 @@ Internet Computer Certification notes by Eduardo Aire.
     4. [Decentralized Data Centers](./content/data-centers.md)
     5. [Tokens and Cycles](./content/tokens-cycles.md)
     6. [Neurons and Governance](./content/neurons-governance.md)
+    7. [Canisters](./content/canisters.md)
 
 -   **Motoko**
 
@@ -24,6 +25,7 @@ Internet Computer Certification notes by Eduardo Aire.
 -   [Whitepaper](https://internetcomputer.org/whitepaper.pdf)
 -   [Protocol infographics](https://internetcomputer.org/icig.pdf)
 -   [Chrome wallet](https://chrome.google.com/webstore/detail/bitfinity-wallet/jnldfbidonfeldmalbflbmlebbipcnle)
+-   [Playground](https://m7sm4-2iaaa-aaaab-qabra-cai.ic0.app/)
 
 ## Activities
 
