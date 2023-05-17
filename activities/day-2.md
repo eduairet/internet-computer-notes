@@ -36,18 +36,18 @@
             ```Motoko
             actor MiActor {
 
-            var age = 12;
+                var edad = 12;
 
-            public func next() : async Nat {
-                age += await Older.birthday(); // Older es otro actor
-                return age;
-            }
+                public func crece() : async Nat {
+                    edad += await Viejo.cumple(); // Older es otro actor
+                    return edad;
+                }
             };
             ```
 
 <hr/>
 
-### Modelo de actores
+### Modelo de actores
 
 -   **Modelo de programación basado en actores** para contratos inteligentes de canister.
 -   Los actores tienen un **estado aislado** e **interactúan a través de mensajes asíncronos.**
@@ -62,9 +62,9 @@ actor MiActor {}
 
 <hr/>
 
-## Ejemplo de _playground_
+### Ejemplo de _playground_
 
-```
+```Motoko
 actor Saludo {
   public query func saluda(frase : Text) : async Text {
     return frase;
