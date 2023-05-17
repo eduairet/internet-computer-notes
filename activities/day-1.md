@@ -1,6 +1,6 @@
 # Internet Computer
 
-## ¿Qué es?
+## ¿Qué es?
 
 -   Es una _blockchain_ que ejecuta aplicaciones descentralizadas a la **velocidad del Internet.**
 -   Se ejecuta en nodos distribuidos en _Data Centers_ alrededor del mundo.
@@ -29,7 +29,7 @@
 -   Los usuarios necesitan la clave pública del **NNS** para la **validación.**
 -   Permite cambios de membresía de **_subnet,_** seguridad proactiva, claves públicas permanentes y recolección de basura.
 
-## Tokens y ciclos
+## Tokens y ciclos
 
 -   ICP token es el token nativo.
 -   Se puede convertir en ciclos para pagar recursos computacionales y son necesarios para el funcionamiento de los canisters.
