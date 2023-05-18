@@ -13,7 +13,6 @@ Internet Computer Certification notes by Eduardo Aire.
     5. [Tokens and Cycles](./content/tokens-cycles.md)
     6. [Neurons and Governance](./content/neurons-governance.md)
     7. [Canisters](./content/canisters.md)
-    8. [Canis]
 
 -   **Motoko**
 
