@@ -37,3 +37,4 @@ Internet Computer Certification notes by Eduardo Aire.
 
 -   [Day 1](./activities/day-1.md)
 -   [Day 2](./activities/day-2.md)
+-   [Day 3](./activities/day-3.md)

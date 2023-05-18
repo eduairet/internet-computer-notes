@@ -123,9 +123,9 @@
     -   If everything went well you'll be able to interact with your DApp
 
         ```Shell
-        # dfx canister --network ic call canister_name function_name arguments
+        # dfx canister --network ic call project_name function_name arguments
         dfx canister --network ic call hello_backend greet '("everyone": text)'
 
-        ## Check balance after the interaction
+        # Check balance after the interaction
         dfx wallet balance
         ```
