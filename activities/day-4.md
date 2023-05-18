@@ -1,6 +1,6 @@
 # Desplegado
 
-## Entorno de pruebas (Staging)
+## Entorno de pruebas _(Staging)_
 
 -   Beneficios de un entorno de pruebas:
     -   Permite realizar **pruebas _end-to-end_** de las funciones antes de implementar en producción.
