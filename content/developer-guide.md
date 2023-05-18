@@ -1,214 +1,131 @@
 # Motoko Programming Language Guide
 
-## Basics
+## Environment
 
--   Comments
+-   [Motoko VS Code extension](https://github.com/dfinity/vscode-motoko)
+    -   Install through VS Marketplace
+    -   Features
+        -   Package managers Vessel and MOPS included
+        -   Doesn't need to install `dfx` separately
+        -   Includes chema validation and autocompletion for `dfx.json` config files
+        -   Documentation on `HOVER`
 
-    ```Motoko
-    // Comment
+## Deployment
 
-    // Multi-
-    // line
+-   You'll need a `unix` terminal
+-   Downloaw and install the SDK package
+    ```Shell
+    sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
     ```
-
--   Strings
-
-    -   Type name -> `Text`
-    -   UTF-8 encoded binaries
-
-        ```Motoko
-        // Double quotes
-        "👩‍💻 こんにちは Motoko 💫"
+-   Accept the license agreement by pressing `y` and `return`
+-   Check that it was correctly installed
+    ```Shell
+    dfx --version
+    ```
+-   Create a new project
+    ```Shell
+    dfx new hello && cd hello
+    ```
+-   **Start local deployment**
+    -   In a first terminal start the canister execution environment
+        ```Shell
+        hello $ dfx start --background
         ```
-
-    -   Concatenation
-        ```Motoko
-        let n = "Lalo";
-        "I am, " # n # "!" // Uses operator #
-        // "I am, Lalo!"
-        ```
-    -   Escaping
-        ```
-        \n	Newline
-        \r	Carriage Return
-        \t	Tab
-        \"	Double Quote
-        \\	Backslash
-        ```
-    -   Common methods
-
-        ```Motoko
-        myString.size() // length
-        Text.chars() // returns iter to loop over the chars
-        "A" == "A" // can be compared with other string
-        ```
-
-    -   Types can be converted to string
-        ```Motoko
-        32.toText(natVal)
-        ```
-
--   Booleans
-    -   Type name -> `Bool`
-    -   `true` and `false`
-    -   `and` and `or` can be used to compare and are _short circuiting_
-        ```Motoko
-        true and false // false
-        false or true // true
-        ```
-    -   `not` is for negation
-        ```Motoko
-        not false // true
-        ```
--   Numbers
-
-    -   Integers
-
-        -   Type names -> `Int` `Nat`
-        -   `Int`
-            ```Motoko
-            // Positive or negative integers
-            +1 // 1 : Int -> Will be treated as Nat
-            -1 // -1 : Int
+    -   In the second terminal you'll run your commands to work on the project
+        -   Install node packages
+            ```Shell
+            npm install
             ```
-        -   `Nat`
-
-            ```Motoko
-            1_000 // : Nat can be written with underscore
-            123456789 // 123_456_789 : Nat -> Output will have underscore
-            0xF // 15 : Nat -> Can be hexadecimal
+        -   Register, build, and deploy the dapp
+            ```Shell
+            # It will deploy frontend and backend
+            dfx deploy
             ```
-
-        -   Number operations
-
-            ```Motoko
-            1 + 1 // => 2 : Nat
-            +2 - 5 // => -3 : Int
-            3 * 3 // => 9 : Nat
-            5 / 2 // => 2 : Nat
-            5 % 2 // => 1 : Nat
-            2 > 1  // => true
-            2 < 1  // => false
-            2 >= 1 // => true
-            2 <= 1 // => false
-            0.1 + 0.1 + 0.1 == 0.3 // => false / Float have limited precision
+        -   Now you can interact with your deployment
+            ```Shell
+            # dfx canister call project_name function_name arguments
+            dfx canister call hello_backend greet everyone
+            # ("Hello, everyone!")
             ```
+        -   Stop the execution environment
+            ```Shell
+            dfx stop
+            ```
+-   **Mainnet deployment**
 
-    -   Bounded integers
+    -   Check your connection to the IC
+        ```Shell
+        dfx ping ic
+        ```
+    -   It should return data about your connection
+        ```Shell
+        {
+        "certified_height": 34912399  "ic_api_version": "0.18.0"  "impl_hash": "83128b3d340d81e601413dcebcbda3bdf0fd5dcb151f7cc0e43790cedd3e5f40"  "impl_version": "6d21535b301fee2ad3e8a0e8af2c3f9a3d022111"  "replica_health_status": "healthy"  "root_key": [48, 129, 130, 48, 29, 6, 13, 43, 6, 1, 4, 1, 130, 220, 124, 5, 3, 1, 2, 1, 6, 12, 43, 6, 1, 4, 1, 130, 220, 124, 5, 3, 2, 1, 3, 97, 0, 129, 76, 14, 110, 199, 31, 171, 88, 59, 8, 189, 129, 55, 60, 37, 92, 60, 55, 27, 46, 132, 134, 60, 152, 164, 241, 224, 139, 116, 35, 93, 20, 251, 93, 156, 12, 213, 70, 217, 104, 95, 145, 58, 12, 11, 44, 197, 52, 21, 131, 191, 75, 67, 146, 228, 103, 219, 150, 214, 91, 155, 180, 203, 113, 113, 18, 248, 71, 46, 13, 90, 77, 20, 80, 95, 253, 116, 132, 176, 18, 145, 9, 28, 95, 135, 185, 136, 131, 70, 63, 152, 9, 26, 11, 170, 174]
+        }
+        ```
+    -   Verify your identity (principal identifier)
 
-        -   Integer types with fixed precision
-            -   Memory efficiency
-            -   Exact sizing
-            -   Execution efficiency
-            -   Bitwise arithmetic
-        -   Are declared manually
-        -   Types (bites are specified in the type)
+        ```Shell
+        # Developer identity
+        dfx identity whoami
+        # default
 
-            ```Motoko
-            // Nat8, Nat16, Nat32, Nat64
-            2 : Nat8
-            // Int8, Int16, Int32, Int64
-            -2 : Int8
+        # Textual representation of the principal
+        dfx identity get-principal
+        # tsqwz-udeik-5migd-ehrev-pvoqv-szx2g-akh5s-fkyqc-zy6q7-snav6-uqe
+
+        # Account identifier
+        dfx ledger account-id
+        # 03e3d86f29a069c6f2c5c48e01bc084e4ea18ad02b0eec8fccadf4487183c223
+
+        # Balance
+        dfx ledger --network ic balance
+        # 0.00000000 ICP
+        ```
+
+    -   Cycles wallet
+
+        -   Create a new canister with cycles
+            ```Shell
+            dfx ledger --network ic create-canister <principal-identifier> --amount <icp-tokens>
+            ```
+            -   `<principal-identifier>` is the textual representation of the principal
+            -   `<icp-tokens>` is the amount of tokens you want to convert in `cycles`
+        -   Install the cycles wallet code in the canister
+            ```Shell
+            dfx identity --network ic deploy-wallet <canister-identifer>
+            ```
+            -   `<canister-identifer>` was return in the previous step
+        -   Validate the cycles wallet
+
+            ```Shell
+            dfx identity --network ic get-wallet
+            # Returns the canister identifier
+
+            dfx wallet --network ic balance
+            # Returns the balance for the your cycles wallet
             ```
 
-        -   Modular arithmetics
+            -   You can check your wallet in your browser with an URL like this `https://<WALLET-CANISTER-ID>.icp0.io`
 
-            -   Protect the numbers to overflow their bounds `+%, -%, *%, **%`
+        -   Add more cycles
 
-                ```Motoko
-                let a = 255 : Nat8;
-                let b = 1 : Nat8;
-                a + b // execution error, arithmetic overflow
-
-                let a = 255 : Nat8;
-                let b = 1 : Nat8;
-                a +% b // 0 : Nat8
-
-                let a = 127 : Int8;
-                let b = 1 : Int8;
-                a +% b // -128 : Int8
-                ```
-
-        -   Bitwise arithmetics
-
-            ```Motoko
-            // Binary OR "|"
-            let a = 64 : Nat8; // binary 1000000
-            let b = 65 : Nat8; // binary 1000001
-            a | b // 65 : Nat8 == binary 1000001
-
-            // Binary XOR "^"
-            let a = 64 : Nat8; // binary 1000000
-            let b = 65 : Nat8; // binary 1000001
-            a ^ b // 1 : Nat8  == binary 0000001
-
-            // Binary shift left "<<"
-            let a = 64 : Nat8; //    binary  1000000
-            a << 1 // 128 : Nat8  == binary 10000000
-
-            // Binary shift right ">>"
-            let a = 64 : Nat8; //   binary 1000000
-            a >> 1 // 32 : Nat8  == binary  100000
-
-            // Binary rotation left "<<>"
-            let a = 255 : Nat8; //    binary 11111111
-            a <<> 1 // 255 : Nat8  == binary 11111111
-
-            // Binary rotation right "<>>"
-            let a = 64 : Nat8; //   binary 1000000
-            a <>> 1 // 32 : Nat8 == binary  100000
+            ```Shell
+            dfx ledger --network ic top-up <WALLET-CANISTER-ID> --amount 1.005
             ```
 
-        -   Bounded and arithmetics types interop
+        -   Check the [documentation](https://internetcomputer.org/docs/current/developer-docs/setup/deploy-mainnet) for extra steps (like authentication)
 
-            -   You need to treat types before performing operations between them
+    -   Deploy to mainnet
+        ```Shell
+        dfx deploy --network ic
+        ```
+    -   If everything went well you'll be able to interact with your DApp
 
-                ```Motoko
-                // Generating an unbound type from a bound value
-                import Nat8 "mo:base/Nat8";
-                let a = 64 : Nat8;
-                let b : Nat = Nat8.toNat(a);
-                b
+        ```Shell
+        # dfx canister --network ic call canister_name function_name arguments
+        dfx canister --network ic call hello_backend greet '("everyone": text)'
 
-                // Generating a bound type from an unbound value
-                import Nat8 "mo:base/Nat8";
-                let b = 64 : Nat;
-                let c : Nat8 = Nat8.fromNat(b);
-                c
-                ```
-
-    -   Floats
-
-        -   Decimal numbers
-
-            ```Motoko
-            1.5 // 1.5 : Float
-            2 : Float // 2 : Float
-
-            // Bad for precision
-            -0.1 // -0.100_000_000_000_000_01 : Float
-
-            // Science
-            -0.3e+15 // -300_000_000_000_000 : Float
-
-            // Support hex format with binary exponential
-            -0xFp+10 // = 16 * 2^10 = -15_360 : Float
-            ```
-
-        -   Operators
-
-            ```Motoko
-            1.0 + 1.4 // => 2.399_999_999_999_999_9 : Float
-            5.0 - 1.5 // => 3.5 : Float
-            5.0 / 2.0 // => 2.5 : Float
-            3.0 * 3.1 // => 9.300_000_000_000_000_7 : Float
-            2.0 > 1.0  // => true
-            2.0 < 1.0  // => false
-            2.0 >= 1.0 // => true
-            2.0 <= 1.0 // => false
-            // Be aware that precision might make comparisons tricky
-            ```
-
-## Development
-
--   Version: currently 0.8.7
+        ## Check balance after the interaction
+        dfx wallet balance
+        ```

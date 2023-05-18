@@ -40,3 +40,16 @@
 
 -   Node providers receive compensation for active and spare nodes.
 -   The governance system, the Network Nervous System, manages capacity and compensation.
+
+## Acquiring and Managing Cycles
+
+-   **What are ICP cycles?**
+    -   ICP cycles are resources required for canisters to execute on the Internet Computer blockchain.
+    -   Canisters are executed on nodes run by Node Providers, who use infrastructure and resources to maintain the platform.
+    -   Cycles are not a form of currency but represent the resources consumed by canisters.
+-   **Acquiring Cycles**
+    -   Developers can purchase cycles using ICP tokens.
+    -   Cycles can be transferred from a _"cycles wallet"_ to a canister when it needs more resources.
+-   **Managing Cycles**
+    -   Active canisters continuously consume cycles and require regular _"top-ups"_ to remain functional.
+    -   Cycles are separate from ICP tokens to ensure hosting prices remain stable and to mitigate the economic risks associated with ICP token price fluctuations.

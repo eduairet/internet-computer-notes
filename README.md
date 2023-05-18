@@ -18,6 +18,7 @@ Internet Computer Certification notes by Eduardo Aire.
 
     1. [Language intro](./content/language-intro.md)
     2. [Developer guide](./content/developer-guide.md)
+    3. [Language](./content/language.md)
 
 ## Resources
 
@@ -25,7 +26,12 @@ Internet Computer Certification notes by Eduardo Aire.
 -   [Whitepaper](https://internetcomputer.org/whitepaper.pdf)
 -   [Protocol infographics](https://internetcomputer.org/icig.pdf)
 -   [Chrome wallet](https://chrome.google.com/webstore/detail/bitfinity-wallet/jnldfbidonfeldmalbflbmlebbipcnle)
--   [Playground](https://m7sm4-2iaaa-aaaab-qabra-cai.ic0.app/)
+-   [Motoko Language tour](https://internetcomputer.org/docs/current/motoko/main/motoko)
+-   [Motoko Developer Guide](https://internetcomputer.org/docs/current/motoko/main/about-this-guide)
+-   [Motoko Playground](https://m7sm4-2iaaa-aaaab-qabra-cai.ic0.app/)
+-   [Local Deployment](https://internetcomputer.org/docs/current/developer-docs/setup/deploy-locally)
+-   [Mainnet Deployment](https://internetcomputer.org/docs/current/developer-docs/setup/deploy-mainnet)
+-   [Faucet Cycles](https://internetcomputer.org/docs/current/developer-docs/setup/cycles/cycles-faucet)
 
 ## Activities
 
