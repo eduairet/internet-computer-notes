@@ -1,6 +1,6 @@
 # Desplegado
 
-## Entorno de pruebas (Staging)
+## Entorno de pruebas (Staging)
 
 -   Beneficios de un entorno de pruebas:
     -   Permite realizar **pruebas _end-to-end_** de las funciones antes de implementar en producción.
@@ -11,7 +11,6 @@
     -   Las redes (o entornos) se definen en `dfx.json`
     -   Se agrega una red de pruebas llamada `myStaging` a `dfx.json` en la sección `networks`
         ```JSON
-        Copy code
         "myStaging": {
             "providers": [
                 "https://icp0.io"
