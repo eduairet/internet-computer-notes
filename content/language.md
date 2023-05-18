@@ -1,5 +1,17 @@
 # Language
 
+## Development
+
+-   Version: currently 0.8.7
+
+## Syntax and Objects
+
+-   Actor expression
+
+    ```Motoko
+    actor {}
+    ```
+
 -   Comments
 
     ```Motoko
@@ -7,6 +19,11 @@
 
     // Multi-
     // line
+
+    /* Also
+    miltiline */
+
+    /// @deprecated
     ```
 
 -   Strings
@@ -207,6 +224,12 @@
             // Be aware that precision might make comparisons tricky
             ```
 
-## Development
+-   HashMaps
 
--   Version: currently 0.8.7
+    -   `HashMap<K, V>` -> keys of type `H` to values of type `V`
+
+        -   Is internally an array of `AssocList`(buckets)
+
+            ```Motoko
+
+            ```
