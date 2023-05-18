@@ -43,7 +43,7 @@
 
     -   Types can be converted to string
         ```Motoko
-        32.toText(natVal)
+        Nat.toText(32)
         ```
 
 -   Booleans
