@@ -14,6 +14,10 @@ Internet Computer Certification notes by Eduardo Aire.
     6. [Neurons and Governance](./content/neurons-governance.md)
     7. [Canisters](./content/canisters.md)
 
+-   **DApp**
+
+    1.  [Frontend](./content/frontend.md)
+
 -   **Motoko**
 
     1. [Language intro](./content/language-intro.md)
