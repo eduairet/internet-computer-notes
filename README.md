@@ -17,6 +17,7 @@ Internet Computer Certification notes by Eduardo Aire.
 -   **DApp**
 
     1.  [Frontend](./content/frontend.md)
+    2.  [User Interaction](./content/user-interaction.md)
 
 -   **Motoko**
 
