@@ -17,11 +17,11 @@
 
         ```CANDID
         service counter : {
-        add : (nat) -> ();
-        subtract : (nat) -> ();
-        get : () -> (int) query;
-        subscribe : (func (int) -> ()) -> ();
-        divMod : (dividend : nat, divisor : nat) -> (div : nat, mod : nat);
+            add : (nat) -> ();
+            subtract : (nat) -> ();
+            get : () -> (int) query;
+            subscribe : (func (int) -> ()) -> ();
+            divMod : (dividend : nat, divisor : nat) -> (div : nat, mod : nat);
         }
         ```
 
@@ -30,14 +30,14 @@
 
         ```CANDID
         type address = record {
-        street : text;
-        city : text;
-        zip_code : nat;
-        country : text;
+            street : text;
+            city : text;
+            zip_code : nat;
+            country : text;
         };
         service address_book : {
-        set_address: (name : text, addr : address) -> ();
-        get_address: (name : text) -> (opt address) query;
+            set_address: (name : text, addr : address) -> ();
+            get_address: (name : text) -> (opt address) query;
         }
         ```
 
@@ -45,21 +45,21 @@
 
         ```CANDID
         service counter : {
-        add : (nat) -> ();
-        subtract : (nat) -> ();
-        get : () -> (int) query;
-        subscribe : (func (int) -> ()) -> ();
+            add : (nat) -> ();
+            subtract : (nat) -> ();
+            get : () -> (int) query;
+            subscribe : (func (int) -> ()) -> ();
         }
         ```
 
         ```CANDID
         type timestamp = nat;
         service counter : {
-        set : (nat) -> ();
-        add : (int) -> (new_val : nat);
-        subtract : (nat, trap_on_underflow : opt bool) -> (new_val : nat);
-        get : () -> (nat, last_change : timestamp) query;
-        subscribe : (func (nat) -> (unregister : opt bool)) -> ();
+            set : (nat) -> ();
+            add : (int) -> (new_val : nat);
+            subtract : (nat, trap_on_underflow : opt bool) -> (new_val : nat);
+            get : () -> (nat, last_change : timestamp) query;
+            subscribe : (func (nat) -> (unregister : opt bool)) -> ();
         }
         ```
 
