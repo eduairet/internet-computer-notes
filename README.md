@@ -14,16 +14,26 @@ Internet Computer Certification notes by Eduardo Aire.
     6. [Neurons and Governance](./content/neurons-governance.md)
     7. [Canisters](./content/canisters.md)
 
--   **DApp**
-
-    1.  [Frontend](./content/frontend.md)
-    2.  [User Interaction](./content/user-interaction.md)
-
 -   **Motoko**
 
     1. [Language intro](./content/language-intro.md)
     2. [Developer guide](./content/developer-guide.md)
     3. [Language](./content/language.md)
+
+-   **DApp**
+
+    1.  [Frontend](./content/frontend.md)
+    2.  [User Interaction](./content/user-interaction.md)
+    3.  [Deploy](./content/deploy.md)
+    4.  [Security](./content/security.md)
+
+## Activities
+
+-   [Day 1](./activities/day-1.md)
+-   [Day 2](./activities/day-2.md)
+-   [Day 3](./activities/day-3.md)
+-   [Day 4](./activities/day-4.md)
+-   [Final Project](https://github.com/eduairet/emoji_drop)
 
 ## Resources
 
@@ -37,10 +47,3 @@ Internet Computer Certification notes by Eduardo Aire.
 -   [Local Deployment](https://internetcomputer.org/docs/current/developer-docs/setup/deploy-locally)
 -   [Mainnet Deployment](https://internetcomputer.org/docs/current/developer-docs/setup/deploy-mainnet)
 -   [Faucet Cycles](https://internetcomputer.org/docs/current/developer-docs/setup/cycles/cycles-faucet)
-
-## Activities
-
--   [Day 1](./activities/day-1.md)
--   [Day 2](./activities/day-2.md)
--   [Day 3](./activities/day-3.md)
--   [Day 4](./activities/day-4.md)
